@@ -1,6 +1,6 @@
 import ExpenseItem from './ExpenseItem';
-import {expenses} from '../App';
-import Card from './card';
+import {expenses} from '../../App';
+import Card from '../UI/card';
 import './Expenses.css'
 
 function Expenses(){

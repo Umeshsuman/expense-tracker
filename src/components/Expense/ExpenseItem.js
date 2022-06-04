@@ -1,7 +1,6 @@
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/card';
 import './ExpenseItem.css'
-import { useState } from 'react';
 const ExpenseItem = (props) => {
     let title = props.title;
     const handleClick = () =>{

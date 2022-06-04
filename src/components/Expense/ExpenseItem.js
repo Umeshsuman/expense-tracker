@@ -3,9 +3,10 @@ import Card from '../UI/card';
 import './ExpenseItem.css'
 import { useState } from 'react';
 const ExpenseItem = (props) => {
-    const [title, setTitle]  = useState(props.title)
-    const clickHandler = () => {
-        setTitle("Updated!!")
+    let title = props.title;
+    const handleClick = () =>{
+            title = "updated";
+        console.log(title)
     }
     return (
         <Card className='expense-item'>
@@ -14,8 +15,7 @@ const ExpenseItem = (props) => {
             />
             <div className='expense-item__description'>
                 <h2>{title}</h2>
-                <div className='expense-item__price'>${props.amount}</div>
-                <button onClick={clickHandler}>Chnage Title</button>
+                <div onClick={handleClick} className='expense-item__price'>${props.amount}</div>
             </div>
         </Card>
     );

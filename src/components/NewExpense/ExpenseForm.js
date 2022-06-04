@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './ExpenseForm.css'
 
 const ExpenseForm = () => {
-<<<<<<< Updated upstream
     //const [enteredTitle,setEnteredTitle] = useState("")
     //const [enteredAmount,setEnteredAmount] = useState("")
     //const [enteredDate,setEnteredDate] = useState("")
@@ -47,21 +46,13 @@ const ExpenseForm = () => {
             date:new Date(enteredValue.enteredDate)
         }
         console.log(ExpenseData)
-=======
-    const titleChangeHandeler = (e) => {
-        console.log(e.target.value)
->>>>>>> Stashed changes
     }
     return (
         <form onSubmit={submitHandler}>
         <div className='new-expense__controls'>
         <div className='new-expense__control'>
             <label>Title</label>
-<<<<<<< Updated upstream
             <input onChange={changeTitleHandler} type="text" />
-=======
-            <input type="text" onChange={titleChangeHandeler} />
->>>>>>> Stashed changes
         </div>
         <div className='new-expense__control'>
             <label>Amount</label>

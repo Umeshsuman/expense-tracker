@@ -37,9 +37,12 @@ export const expenses = [
 
 
 function App() {
+  const addExpenseHandeler = expense =>{
+    console.log(expense)
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandeler}/>
       <Expenses/>
     </div>
   );

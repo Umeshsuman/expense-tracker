@@ -1,6 +1,8 @@
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/card';
 import './ExpenseItem.css'
+
+
 const ExpenseItem = (props) => {
     let title = props.title;
     const handleClick = () =>{

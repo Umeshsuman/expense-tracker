@@ -19,14 +19,27 @@ function Expenses(props){
       <div>
         <Card className="expenses ">
         <ExpenseFilter selected={filteredYear} onChangeYear={addChangedYear}/>
-        {filteredExpenses.map((expense)=>{
+    {/*filteredExpenses.length === 0 && <p style={{color:"#fff","text-align":"center"}}>No item Found</p>*/}
+        {filteredExpenses.length === 0 ? (<p style={{color:"#fff","text-align":"center"}}>No item Found</p>) :
+        (
+          filteredExpenses.map((expense)=>{
             return <ExpenseItem
             key={expense.id}
               date={expense.date}
               amount={expense.amount}
               title={expense.title}
             />
-          })}
+          })
+        )
+      }
+        {/*filteredExpenses.map((expense)=>{
+            return <ExpenseItem
+            key={expense.id}
+              date={expense.date}
+              amount={expense.amount}
+              title={expense.title}
+            />
+          })*/}
         </Card>
         </div>
     );

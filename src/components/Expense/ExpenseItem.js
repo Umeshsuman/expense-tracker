@@ -10,6 +10,7 @@ const ExpenseItem = (props) => {
         console.log(title)
     }
     return (
+        <li>
         <Card className='expense-item'>
             <ExpenseDate
                 date={props.date}
@@ -19,6 +20,7 @@ const ExpenseItem = (props) => {
                 <div onClick={handleClick} className='expense-item__price'>${props.amount}</div>
             </div>
         </Card>
+        </li>
     );
 }
 export default ExpenseItem;
